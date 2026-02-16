@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +10,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <header>
             <h1>PDF to Word Converter</h1>
             <p>Convert your PDFs to editable Word documents instantly.</p>
         </header>
-        
+
         <main>
             <div id="drop-zone" class="drop-zone">
                 <div class="drop-zone-content">
-                    <img src="https://www.svgrepo.com/show/355169/file-pdf.svg" alt="PDF Icon" class="icon" id="icon">
+                    <img src="{{ url_for('static', filename='pdf-icon.svg') }}" alt="PDF Icon" class="icon" id="icon">
                     <p class="drop-text">Drag & Drop your PDF here</p>
                     <p class="or-text">or</p>
                     <button id="browse-btn" class="btn">Browse Files</button>
@@ -33,15 +35,16 @@
                     </div>
                 </div>
             </div>
-            
+
             <div id="status-message" class="status-message hidden"></div>
         </main>
-        
+
         <footer>
             <p>Simple, Fast, Local.</p>
         </footer>
     </div>
-    
+
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
+
 </html>
