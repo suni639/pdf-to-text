@@ -7,13 +7,12 @@ cd /d "%~dp0"
 :: Activate virtual environment
 call venv\Scripts\activate
 
-:: Start browser in background (waits a moment for server to start)
-width=1200
-height=800
+:: Start browser in background
 start "" "http://localhost:5000"
 
 :: Run Flask App
-echo Server running. Press Ctrl+C to stop.
+echo Server running.
+echo Press Ctrl+C to stop.
 python app.py
 
 pause
