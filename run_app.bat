@@ -12,7 +12,6 @@ start "" "http://localhost:5000"
 
 :: Run Flask App
 echo Server running.
-echo Press Ctrl+C to stop.
 python app.py
 
 pause
