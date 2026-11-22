@@ -7,7 +7,7 @@ I solved my own problem as I needed to convert large PDF files for a project int
 ## Features
 - **Drag & Drop Interface**: Simple and intuitive modern UI.
 - **Large File Support**: Optimised to handle PDF files up to 1GB.
-- **Local Processing**: Complete privacy - your files never leave your machine.
+- **Local Processing**: Complete privacy - your files never leave your machine. The page makes no outside requests, and temporary copies are deleted after every conversion.
 - **One-Click Launch**: Includes a convenient desktop shortcut script. No faff.
 
 ## Installation & Setup
@@ -36,10 +36,16 @@ Once installed, you can launch the app in two ways:
 A command window will open to start the local server, and your default web browser will automatically open the application at `http://localhost:5000`.
 
 ## Technologies
-- **Backend**: Python, Flask, PyMuPDF (fitz), python-docx
+- **Backend**: Python, Flask, PyMuPDF, python-docx
 - **Frontend**: HTML5, CSS3, JavaScript
 
 ## Troubleshooting
 - If the app doesn't start, ensure you have Python installed and added to your system PATH.
 - If the `.bat` file briefly flashes and closes, ensure you have created the `venv` folder as described in the installation steps.
+- If you see "No text found", the PDF is probably scanned (its text is stored as images). Converting it needs OCR, which this tool doesn't do.
+
+## Limitations
+- **Text only:** images, tables and formatting are not carried across.
+- **No OCR:** scanned PDFs can't be converted.
+- **No password-protected PDFs.**
 - If a conversion fails for a specific PDF, check if the PDF is password-protected or corrupted.
